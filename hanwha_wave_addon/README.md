@@ -1,7 +1,7 @@
-# Hanwha WAVE Bridge
+# Hanwha WAVE Media Server
 
-This Home Assistant app connects to a local Hanwha Wisenet WAVE server and publishes camera snapshots using MQTT discovery. After the app starts, camera entities appear automatically in Home Assistant when the MQTT integration is configured.
+This Home Assistant app runs the official Hanwha Wisenet WAVE Media Server package directly inside Home Assistant.
 
-Configure the WAVE host, port, HTTPS setting, and a WAVE user with camera-view permission. The MQTT broker defaults to the Home Assistant Mosquitto app.
+After installation, open the WAVE Web Admin interface using the app's **Open Web UI** button or `http://HOME_ASSISTANT_IP:7001`. Complete the WAVE setup wizard there, create the first administrator, add cameras, and configure recording storage.
 
-The WAVE API documentation is available from the WAVE server at `http://<server>:7001/#/api-tool`.
+The add-on uses WAVE Server 6.1.2.42921 for 64-bit x86 Linux. WAVE data is stored persistently in the add-on configuration directory.
