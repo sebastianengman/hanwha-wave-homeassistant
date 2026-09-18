@@ -1,5 +1,7 @@
-# Configuration
+# Hanwha WAVE Media Server
 
-Use a dedicated read-only WAVE account. Do not put credentials in GitHub or in this repository.
+Open the Web UI on port 7001 after starting the app. The first-run WAVE setup wizard creates the administrator account and system. The app does not store WAVE credentials in the repository.
 
-The bridge currently supports camera discovery and JPEG snapshots. PTZ, recordings, events, and audio are not included yet.
+The official WAVE package stores its mutable database and configuration under the app's persistent `/config/wave` directory. Camera recordings should be configured on a dedicated disk or network share from the WAVE Web Admin interface.
+
+This app currently supports the amd64 architecture because the official installer supplied by Hanwha is `linux_x64`.
