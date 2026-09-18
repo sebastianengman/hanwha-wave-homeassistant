@@ -1,0 +1,1 @@
+{"config":{"step":{"user":{"data":{"host":"WAVE server","port":"API port","ssl":"Use HTTPS","username":"Username","password":"Password"}},"error":{"cannot_connect":"Could not connect to WAVE or credentials were rejected."}}}}
