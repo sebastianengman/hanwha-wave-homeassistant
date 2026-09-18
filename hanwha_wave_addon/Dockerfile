@@ -3,6 +3,7 @@ FROM ubuntu:22.04
 ARG BUILD_VERSION
 ARG BUILD_ARCH
 ARG WAVE_URL=https://updates.wavevms.com/hanwha/42921/linux/wave-server-6.1.2.42921-linux_x64.deb
+ARG WAVE_SHA256=6a4aa8de68ef1b32048018b03d7819ddf9f059ad71b4183d980f1bdc860eb31c
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -11,6 +12,7 @@ RUN apt-get update \
         bash ca-certificates cifs-utils curl debconf file libasound2 libcap2-bin \
         libdrm2 libexpat1 libglib2.0-0 libgomp1 libudev1 net-tools procps zlib1g \
     && curl -fsSL --retry 3 --retry-delay 2 -o /tmp/wave-server.deb "${WAVE_URL}" \
+    && echo "${WAVE_SHA256}  /tmp/wave-server.deb" | sha256sum -c - \
     && dpkg -i /tmp/wave-server.deb \
     && rm -f /tmp/wave-server.deb \
     && apt-get clean \
