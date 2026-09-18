@@ -1,0 +1,37 @@
+name: Hanwha WAVE Bridge
+version: "0.2.0"
+slug: hanwha_wave
+description: Publishes Hanwha Wisenet WAVE cameras to Home Assistant through MQTT discovery.
+url: https://github.com/sebastianengman/hanwha-wave-homeassistant
+arch:
+  - amd64
+  - aarch64
+  - armv7
+startup: services
+boot: auto
+init: false
+host_network: true
+services:
+  - mqtt:need
+options:
+  wave_host: null
+  wave_port: 7001
+  wave_ssl: false
+  wave_username: null
+  wave_password: null
+  mqtt_host: core-mosquitto
+  mqtt_port: 1883
+  mqtt_username: ""
+  mqtt_password: ""
+  scan_interval: 30
+schema:
+  wave_host: str
+  wave_port: port
+  wave_ssl: bool
+  wave_username: str
+  wave_password: password
+  mqtt_host: str
+  mqtt_port: port
+  mqtt_username: str?
+  mqtt_password: password?
+  scan_interval: int(10,300)
