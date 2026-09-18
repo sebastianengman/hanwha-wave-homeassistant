@@ -1,0 +1,11 @@
+{
+  "domain": "hanwha_wave",
+  "name": "Hanwha WAVE",
+  "codeowners": ["@sebastianengman"],
+  "config_flow": true,
+  "documentation": "https://github.com/sebastianengman/hanwha-wave-homeassistant",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/sebastianengman/hanwha-wave-homeassistant/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}
