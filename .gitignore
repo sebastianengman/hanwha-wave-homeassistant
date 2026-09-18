@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.HA_VERSION
+login-creds
+.DS_Store
